@@ -3128,6 +3128,16 @@ ul.actions li {
 			bottom: 0;
 		}
 
+		/* Consistent spacing between headings and paragraphs */
+.content h2 {
+  margin-bottom: 1em;   /* adjust to taste: 0.5em, 1em, etc. */
+}
+
+.content p {
+  margin-top: 0;        /* removes extra top spacing */
+}
+
+
 		.spotlight.left .content, .spotlight.right .content {
 			height: 101%;
 			padding: 6em 3em;
@@ -3147,6 +3157,7 @@ ul.actions li {
 
 		.spotlight.style1 .content {
 			border-color: #CC5500;
+
 		}
 
 		.spotlight.style2 .content {
@@ -3478,10 +3489,10 @@ ul.actions li {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.80)), url("images/overlay.png");
+			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.80)), url("images/overlay.png");
+			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.80)), url("images/overlay.png");
+			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.80)), url("images/overlay.png");
 			content: '';
 			display: block;
 			height: 100%;
