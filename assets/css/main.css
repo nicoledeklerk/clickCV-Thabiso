@@ -2512,35 +2512,34 @@ input, select, textarea {
 .image {
     position: relative;
     width: 200px;            /* set desired size */
-    height: 200px;           /* same as width for circle/square */
-    border-radius: 50%;      /* circle if needed */
+    height: 200px;           /* same as width for square/circle */
+    border-radius: 0;        /* set to 50% if you want a circle */
     overflow: hidden;
 }
 
 .image:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;                /* shorthand for top:0; right:0; bottom:0; left:0; */
     background-image: url("images/overlay.png");
-    background-size: cover;       /* fills the pseudo-element */
-    background-position: center;  /* centers it */
+    background-size: cover;       /* fills the pseudo-element without stretching */
+    background-position: center;  /* keeps the overlay centered */
     background-repeat: no-repeat;
     z-index: 1;
+    border-radius: inherit;       /* matches the .image shape */
 }
 
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  
-	object-position: top;  /* aligns the top of the image with the container */     /* fills the container without distortion */
+    object-fit: cover;            /* maintains aspect ratio, fills container */
+    object-position: top;         /* aligns top of image with container */
     display: block;
-    border-radius: 50%;      /* match .image if circular */
+    border-radius: inherit;       /* matches .image shape */
     position: relative;
     z-index: 0;
 }
+
 
 
 		.image.left {
@@ -2914,14 +2913,14 @@ ul.actions li {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #e76278;
+				background-color: #993300;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #e13652;
+				background-color: #993300;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
